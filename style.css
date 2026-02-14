@@ -75,18 +75,21 @@ main {
     min-height: calc(100vh - 100px);
     width: 100%;
     padding: 0 80px;
-    gap: 40px;
+    position: relative;
 }
 
 .left {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 40px 0;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
 }
 
 .hero-content {
+    margin-top: 20px;
     max-width: 700px;
 }
 
@@ -108,7 +111,7 @@ main {
 }
 
 .bio-section {
-    margin-top: 40px;
+    margin-top: 30px;
     max-width: 600px;
 }
 
@@ -118,6 +121,7 @@ main {
     color: #b0b0b0;
     margin-bottom: 20px;
     font-weight: 400;
+    letter-spacing: 0.2px;
 }
 
 .bio-text.second {
@@ -129,12 +133,12 @@ main {
 }
 
 .right {
-    flex: 0.8;
+    flex: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .right::before {
@@ -159,8 +163,8 @@ main {
 }
 
 .right img {
-    width: 380px;
-    height: 380px;
+    width: 420px;
+    height: 420px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.4);
@@ -172,6 +176,9 @@ main {
     text-align: center;
     z-index: 10;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .info-card h2 {
@@ -219,6 +226,7 @@ main {
 .education-section {
     padding: 120px 80px;
     background: #0a0a0a;
+    position: relative;
 }
 
 .section-header {
@@ -258,6 +266,7 @@ main {
     display: flex;
     gap: 28px;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .education-card:hover {
@@ -312,6 +321,12 @@ main {
     margin-bottom: 16px;
 }
 
+.education-institution i {
+    color: #ffffff;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
 .education-year {
     display: flex;
     align-items: center;
@@ -320,9 +335,15 @@ main {
     font-size: 17px;
 }
 
+.education-year i {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
 .skills-section {
     padding: 120px 80px;
     background: #0a0a0a;
+    position: relative;
 }
 
 .skills-container {
@@ -349,6 +370,7 @@ main {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .skill-item::before {
@@ -408,6 +430,7 @@ main {
     font-weight: 600;
     color: #ffffff;
     text-align: center;
+    line-height: 1.4;
 }
 
 .projects-section {
@@ -429,7 +452,9 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
@@ -452,6 +477,7 @@ main {
     font-size: 64px;
     color: #ffffff;
     opacity: 0.3;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-icon {
@@ -460,6 +486,9 @@ main {
 
 .project-content {
     padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-content h3 {
@@ -475,11 +504,14 @@ main {
     color: #9ca3af;
     line-height: 1.6;
     margin-bottom: 24px;
+    flex: 1;
 }
 
 .project-links {
     display: flex;
     justify-content: center;
+    margin-top: auto;
+    padding-top: 16px;
 }
 
 .project-link {
@@ -507,11 +539,13 @@ main {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
+    background: #1a1a1a;
 }
 
 .contact-section {
     padding: 120px 80px;
     background: #0a0a0a;
+    position: relative;
 }
 
 .contact-container {
@@ -609,14 +643,21 @@ main {
     animation: fadeIn 0.5s ease;
 }
 
+.education-card,
+.skill-item,
+.project-card,
+.contact-icon-link {
+    animation: fadeIn 0.6s ease;
+}
+
 @media (max-width: 1200px) {
     .typing-main {
         font-size: 60px;
     }
     
     .right img {
-        width: 320px;
-        height: 320px;
+        width: 360px;
+        height: 360px;
     }
     
     .section-title {
@@ -632,26 +673,12 @@ main {
     .hero-section {
         flex-direction: column;
         padding: 0 40px;
-        gap: 20px;
     }
     
     .left {
-        padding: 20px 0;
-    }
-    
-    .typing-main {
-        font-size: 50px;
-        text-align: center;
-    }
-    
-    .typing-sub p {
-        text-align: center;
-        font-size: 20px;
-    }
-    
-    .bio-section {
+        padding: 40px 0;
+        align-items: flex-start;
         text-align: left;
-        margin: 30px auto;
     }
     
     .right::before {
@@ -659,23 +686,34 @@ main {
     }
     
     .right {
+        padding: 40px 0;
         background: transparent;
-        padding: 20px 0;
+    }
+    
+    .right img {
+        width: 320px;
+        height: 320px;
     }
     
     .education-section,
     .skills-section,
     .projects-section,
     .contact-section {
-        padding: 80px 40px;
+        padding: 100px 40px;
     }
     
     .section-title {
         font-size: 48px;
     }
     
+    .education-card {
+        padding: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .projects-container {
@@ -683,17 +721,52 @@ main {
     }
 }
 
+@media (max-width: 800px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 700px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-icon-link {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
     .hero-section {
         padding: 0 20px;
     }
     
     .typing-main {
-        font-size: 42px;
+        font-size: 48px;
     }
     
     .typing-sub p {
-        font-size: 18px;
+        font-size: 20px;
+    }
+    
+    .bio-text {
+        font-size: 14px;
     }
     
     .right img {
@@ -701,17 +774,36 @@ main {
         height: 260px;
     }
     
+    .info-card {
+        margin-top: 20px;
+    }
+    
     .info-card h2 {
         font-size: 28px;
     }
     
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+    .education-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        padding: 80px 20px;
     }
     
-    .projects-container {
-        grid-template-columns: 1fr;
+    .section-title {
+        font-size: 40px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .skill-item {
+        padding: 24px 12px;
+    }
+    
+    .skill-item i {
+        font-size: 36px;
     }
     
     .contact-icons {
@@ -722,54 +814,27 @@ main {
         width: 60px;
         height: 60px;
         font-size: 28px;
+        border-radius: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    nav ul {
-        gap: 15px;
-    }
-    
-    nav a {
-        font-size: 13px;
-    }
-    
-    .typing-main {
-        font-size: 36px;
-    }
-    
-    .typing-sub p {
-        font-size: 16px;
-    }
-    
-    .bio-text {
-        font-size: 14px;
-    }
-    
-    .right img {
-        width: 220px;
-        height: 220px;
-    }
-    
-    .section-title {
-        font-size: 36px;
+@media (max-width: 400px) {
+    .skills-grid {
+        gap: 12px;
     }
     
     .skill-item {
         padding: 20px 10px;
     }
     
-    .skill-item i {
-        font-size: 32px;
-    }
-    
-    .skill-item span {
-        font-size: 14px;
+    .contact-icons {
+        gap: 15px;
     }
     
     .contact-icon-link {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+        border-radius: 18px;
     }
 }
