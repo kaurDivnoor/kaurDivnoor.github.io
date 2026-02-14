@@ -138,6 +138,7 @@ main {
     right: -410px;  
     text-align: right;
     z-index: 10;
+    margin-bottom: 40px;
 }
 
 .info-card h2 {
@@ -1165,4 +1166,5 @@ main {
         width: 280px;
         height: 280px;
     }
+
 }
