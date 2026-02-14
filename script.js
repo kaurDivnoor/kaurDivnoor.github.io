@@ -39,13 +39,11 @@ function setActiveNav() {
     
     window.addEventListener('scroll', () => {
         let current = '';
-        const headerHeight = document.querySelector('header').offsetHeight;
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - headerHeight - 10;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 150) {
                 current = section.getAttribute('id');
             }
         });
@@ -59,50 +57,6 @@ function setActiveNav() {
     });
 }
 
-// Smooth scroll function with offset for fixed header
-function setupSmoothScroll() {
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-// Handle initial URL hash if present
-function handleInitialHash() {
-    if (window.location.hash) {
-        setTimeout(() => {
-            const targetId = window.location.hash;
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }, 200); // Delay to ensure typing animation doesn't interfere
-    }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".typing-main").textContent = "";
     document.querySelector(".line1").textContent = "";
@@ -110,6 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".line3").textContent = "";
     typeMain();
     setActiveNav();
-    setupSmoothScroll();
-    handleInitialHash();
 });
