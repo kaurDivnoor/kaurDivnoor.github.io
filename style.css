@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -218,15 +219,6 @@ main {
     border-radius: 50%;
     box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.4);
     border: 3px solid rgba(255, 255, 255, 0.1);
-}
-
-/* FIXED: Apply scroll margin to the section IDs that links point to */
-#home,
-#education,
-#skills,
-#projects,
-#contact {
-    scroll-margin-top: 150px;
 }
 
 .education-section {
@@ -706,15 +698,6 @@ main {
 
 /* Main responsive fixes for mobile/tablet */
 @media screen and (max-width: 1000px) {
-    /* Adjust scroll margin for mobile */
-    #home,
-    #education,
-    #skills,
-    #projects,
-    #contact {
-        scroll-margin-top: 100px;
-    }
-    
     header {
         padding: 15px 20px;
     }
