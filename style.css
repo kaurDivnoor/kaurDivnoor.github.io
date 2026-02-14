@@ -6,7 +6,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* Increased from 100px to account for header height */
 }
 
 body {
@@ -76,7 +75,6 @@ main {
     width: 100%;
     padding: 0 80px;
     position: relative;
-    scroll-margin-top: 100px; /* Added for better anchor positioning */
 }
 
 .left {
@@ -222,11 +220,18 @@ main {
     border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Section scroll margin fix for fixed header */
+.education-section,
+.skills-section,
+.projects-section,
+.contact-section {
+    scroll-margin-top: 120px;
+}
+
 .education-section {
     padding: 120px 80px;
     background: #0a0a0a;
     position: relative;
-    scroll-margin-top: 100px; /* Added for better anchor positioning */
 }
 
 .section-header {
@@ -344,7 +349,6 @@ main {
     padding: 120px 80px;
     background: #0a0a0a;
     position: relative;
-    scroll-margin-top: 100px; /* Added for better anchor positioning */
 }
 
 .skills-container {
@@ -437,7 +441,7 @@ main {
 .projects-section {
     padding: 120px 80px;
     background: #0a0a0a;
-    scroll-margin-top: 100px; /* Added for better anchor positioning */
+    scroll-margin-top: 120px;
 }
 
 .projects-container {
@@ -548,7 +552,7 @@ main {
     padding: 120px 80px;
     background: #0a0a0a;
     position: relative;
-    scroll-margin-top: 100px; /* Added for better anchor positioning */
+    scroll-margin-top: 120px;
 }
 
 .contact-container {
@@ -703,6 +707,14 @@ main {
 
 /* Main responsive fixes for mobile/tablet */
 @media screen and (max-width: 1000px) {
+    /* Adjust scroll margin for mobile header height */
+    .education-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        scroll-margin-top: 80px;
+    }
+    
     header {
         padding: 15px 20px;
     }
@@ -716,15 +728,10 @@ main {
         font-size: 15px;
     }
     
-    html {
-        scroll-padding-top: 80px; /* Adjusted for mobile */
-    }
-    
     .hero-section {
         flex-direction: column;
         padding: 0 20px;
         min-height: auto;
-        scroll-margin-top: 80px;
     }
     
     .left {
@@ -817,8 +824,7 @@ main {
     }
     
     .education-section {
-        padding: 100px 20px;
-        scroll-margin-top: 80px;
+        padding: 80px 20px;
     }
     
     .section-title {
@@ -855,8 +861,7 @@ main {
     }
     
     .skills-section {
-        padding: 100px 20px;
-        scroll-margin-top: 80px;
+        padding: 80px 20px;
     }
     
     .skills-grid {
@@ -878,8 +883,7 @@ main {
     }
     
     .projects-section {
-        padding: 100px 20px;
-        scroll-margin-top: 80px;
+        padding: 80px 20px;
     }
     
     .projects-container {
@@ -919,8 +923,7 @@ main {
     }
     
     .contact-section {
-        padding: 100px 20px;
-        scroll-margin-top: 80px;
+        padding: 80px 20px;
     }
     
     .contact-text {
@@ -940,30 +943,6 @@ main {
 }
 
 @media screen and (max-width: 700px) {
-    html {
-        scroll-padding-top: 70px;
-    }
-    
-    .hero-section {
-        scroll-margin-top: 70px;
-    }
-    
-    .education-section {
-        scroll-margin-top: 70px;
-    }
-    
-    .skills-section {
-        scroll-margin-top: 70px;
-    }
-    
-    .projects-section {
-        scroll-margin-top: 70px;
-    }
-    
-    .contact-section {
-        scroll-margin-top: 70px;
-    }
-    
     .typing-main {
         font-size: 36px;
     }
@@ -1009,30 +988,6 @@ main {
 }
 
 @media screen and (max-width: 480px) {
-    html {
-        scroll-padding-top: 60px;
-    }
-    
-    .hero-section {
-        scroll-margin-top: 60px;
-    }
-    
-    .education-section {
-        scroll-margin-top: 60px;
-    }
-    
-    .skills-section {
-        scroll-margin-top: 60px;
-    }
-    
-    .projects-section {
-        scroll-margin-top: 60px;
-    }
-    
-    .contact-section {
-        scroll-margin-top: 60px;
-    }
-    
     nav ul {
         gap: 12px;
     }
