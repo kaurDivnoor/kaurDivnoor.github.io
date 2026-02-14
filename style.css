@@ -86,16 +86,16 @@ main {
     padding-top: 40px;
     padding-bottom: 40px;
     position: relative;
-    max-width: 50%; /* Limit left column width */
+    max-width: 50%;
 }
 
 .hero-content {
     margin-top: 20px;
-    max-width: 90%; /* Further constrain content */
+    max-width: 90%;
 }
 
 .typing-main {
-    font-size: 70px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 16px;
@@ -104,23 +104,23 @@ main {
 }
 
 .typing-sub p {
-    font-size: 22px;
+    font-size: 20px;
     color: #a0a0a0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 400;
     line-height: 1.4;
 }
 
 .bio-section {
-    margin-top: 30px;
-    max-width: 90%; /* Constrain bio section width */
+    margin-top: 25px;
+    max-width: 90%;
 }
 
 .bio-text {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.6;
     color: #b0b0b0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 400;
     letter-spacing: 0.2px;
 }
@@ -129,35 +129,35 @@ main {
     margin-bottom: 0;
     color: #d0d0d0;
     border-left: 3px solid #ffffff;
-    padding-left: 20px;
+    padding-left: 16px;
     font-style: italic;
+    font-size: 14px;
 }
 
 .info-card {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: left;
     z-index: 10;
-    max-width: 90%; /* Constrain info card width */
 }
 
 .info-card h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #ffffff;
     letter-spacing: -0.5px;
 }
 
 .info-card .subtitle {
-    font-size: 18px;
+    font-size: 16px;
     color: #9ca3af;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-weight: 400;
 }
 
 .social-links {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     align-items: center;
 }
 
@@ -165,14 +165,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     background: #1a1a1a;
     border-radius: 12px;
     color: #d1d5db;
     text-decoration: none;
     transition: all 0.2s ease;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .social-icon:hover {
@@ -187,7 +187,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50%; /* Limit right column width */
 }
 
 .right::before {
@@ -209,13 +208,13 @@ main {
     justify-content: flex-start;  
     align-items: center;
     width: 100%;
-    padding-left: 100px;  
-    margin-top: -60px;  
+    padding-left: 80px;  
+    margin-top: -40px;  
 }
 
 .right img {
-    width: 420px;
-    height: 420px;
+    width: 380px;
+    height: 380px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.4);
@@ -649,57 +648,8 @@ main {
     animation: fadeIn 0.6s ease;
 }
 
-/* Desktop-specific fixes */
-@media (min-width: 1001px) {
-    .hero-section {
-        gap: 40px; /* Add gap between columns */
-    }
-    
-    .left {
-        max-width: 45%; /* Make left column narrower */
-    }
-    
-    .right {
-        max-width: 55%; /* Give right column more space */
-    }
-    
-    .hero-content,
-    .bio-section,
-    .info-card {
-        max-width: 90%;
-    }
-    
-    .bio-text {
-        font-size: 15px; /* Slightly smaller text on desktop */
-        line-height: 1.6;
-    }
-    
-    .image-wrapper {
-        padding-left: 60px;
-    }
-    
-    .right img {
-        width: 400px;
-        height: 400px;
-    }
-}
-
+/* Desktop adjustments */
 @media (max-width: 1400px) {
-    .right img {
-        width: 380px;
-        height: 380px;
-    }
-    
-    .image-wrapper {
-        padding-left: 50px;
-    }
-    
-    .typing-main {
-        font-size: 60px;
-    }
-}
-
-@media (max-width: 1200px) {
     .typing-main {
         font-size: 52px;
     }
@@ -709,18 +659,40 @@ main {
         height: 340px;
     }
     
+    .image-wrapper {
+        padding-left: 60px;
+    }
+    
+    .bio-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .typing-main {
+        font-size: 48px;
+    }
+    
+    .typing-sub p {
+        font-size: 18px;
+    }
+    
+    .right img {
+        width: 300px;
+        height: 300px;
+    }
+    
     .section-title {
         font-size: 56px;
     }
     
     .image-wrapper {
         padding-left: 40px;
+        margin-top: -20px;
     }
     
-    .hero-content,
-    .bio-section,
-    .info-card {
-        max-width: 95%;
+    .info-card h2 {
+        font-size: 26px;
     }
 }
 
@@ -743,7 +715,6 @@ main {
         flex-direction: column;
         padding: 0 20px;
         min-height: auto;
-        gap: 0;
     }
     
     .left {
@@ -781,16 +752,16 @@ main {
     
     .bio-text.second {
         border-left: 3px solid #ffffff;
-        padding-left: 20px;
+        padding-left: 16px;
         margin-top: 10px;
         text-align: left;
+        font-size: 13px;
     }
     
     .right {
         width: 100%;
         padding: 20px 0 20px 0;
         position: relative;
-        max-width: 100%;
     }
     
     .right::before {
@@ -804,25 +775,24 @@ main {
     }
     
     .right img {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
         margin: 0 auto;
     }
     
     .info-card {
-        margin-top: 30px;
+        margin-top: 25px;
         text-align: left;
         width: 100%;
-        max-width: 100%;
     }
     
     .info-card h2 {
-        font-size: 28px;
+        font-size: 26px;
         text-align: left;
     }
     
     .info-card .subtitle {
-        font-size: 16px;
+        font-size: 15px;
         text-align: left;
     }
     
@@ -831,9 +801,9 @@ main {
     }
     
     .social-icon {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
     }
     
     .education-section {
@@ -956,6 +926,14 @@ main {
 }
 
 @media screen and (max-width: 700px) {
+    .typing-main {
+        font-size: 36px;
+    }
+    
+    .typing-sub p {
+        font-size: 16px;
+    }
+    
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -965,41 +943,8 @@ main {
     }
     
     .right img {
-        width: 240px;
-        height: 240px;
-    }
-    
-    .info-card h2 {
-        font-size: 26px;
-    }
-    
-    .contact-icon-link {
-        width: 60px;
-        height: 60px;
-        font-size: 26px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    nav ul {
-        gap: 15px;
-    }
-    
-    nav a {
-        font-size: 13px;
-    }
-    
-    .typing-main {
-        font-size: 36px;
-    }
-    
-    .typing-sub p {
-        font-size: 16px;
-    }
-    
-    .right img {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
     
     .info-card h2 {
@@ -1007,29 +952,80 @@ main {
     }
     
     .info-card .subtitle {
-        font-size: 15px;
+        font-size: 14px;
     }
     
-    .skills-grid {
-        gap: 10px;
-    }
-    
-    .skill-item {
-        padding: 15px 8px;
-    }
-    
-    .skill-item i {
-        font-size: 28px;
-    }
-    
-    .skill-item span {
+    .bio-text {
         font-size: 13px;
     }
     
+    .bio-text.second {
+        font-size: 12px;
+    }
+    
     .contact-icon-link {
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        gap: 12px;
+    }
+    
+    nav a {
+        font-size: 12px;
+    }
+    
+    .typing-main {
+        font-size: 32px;
+    }
+    
+    .typing-sub p {
+        font-size: 15px;
+    }
+    
+    .right img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .info-card h2 {
         font-size: 22px;
-        border-radius: 16px;
+    }
+    
+    .info-card .subtitle {
+        font-size: 13px;
+    }
+    
+    .skills-grid {
+        gap: 8px;
+    }
+    
+    .skill-item {
+        padding: 12px 6px;
+    }
+    
+    .skill-item i {
+        font-size: 24px;
+    }
+    
+    .skill-item span {
+        font-size: 12px;
+    }
+    
+    .contact-icon-link {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        border-radius: 14px;
+    }
+    
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
     }
 }
