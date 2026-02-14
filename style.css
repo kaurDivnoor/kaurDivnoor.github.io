@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* Increased from 100px to provide more space */
+    scroll-padding-top: 200px;
 }
 
 body {
@@ -64,20 +64,6 @@ nav a.active::after {
 nav a:hover,
 nav a.active {
     color: #ffffff;
-}
-
-/* Add scroll margin to all sections to account for fixed header */
-section {
-    scroll-margin-top: 120px; /* This ensures each section starts below the header */
-}
-
-/* Alternative approach - target each section by ID */
-#home,
-#education,
-#skills,
-#projects,
-#contact {
-    scroll-margin-top: 120px;
 }
 
 main {
@@ -680,16 +666,6 @@ main {
     .bio-text {
         font-size: 14px;
     }
-    
-    /* Update scroll padding for responsive */
-    html {
-        scroll-padding-top: 110px;
-    }
-    
-    section,
-    #home, #education, #skills, #projects, #contact {
-        scroll-margin-top: 110px;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -717,16 +693,6 @@ main {
     
     .info-card h2 {
         font-size: 26px;
-    }
-    
-    /* Update scroll padding for responsive */
-    html {
-        scroll-padding-top: 100px;
-    }
-    
-    section,
-    #home, #education, #skills, #projects, #contact {
-        scroll-margin-top: 100px;
     }
 }
 
@@ -957,16 +923,6 @@ main {
         height: 65px;
         font-size: 28px;
     }
-    
-    /* Mobile scroll adjustments */
-    html {
-        scroll-padding-top: 80px;
-    }
-    
-    section,
-    #home, #education, #skills, #projects, #contact {
-        scroll-margin-top: 80px;
-    }
 }
 
 @media screen and (max-width: 700px) {
@@ -1011,16 +967,6 @@ main {
         width: 55px;
         height: 55px;
         font-size: 24px;
-    }
-    
-    /* Mobile scroll adjustments */
-    html {
-        scroll-padding-top: 70px;
-    }
-    
-    section,
-    #home, #education, #skills, #projects, #contact {
-        scroll-margin-top: 70px;
     }
 }
 
@@ -1081,15 +1027,5 @@ main {
         width: 38px;
         height: 38px;
         font-size: 16px;
-    }
-    
-    /* Small mobile scroll adjustments */
-    html {
-        scroll-padding-top: 60px;
-    }
-    
-    section,
-    #home, #education, #skills, #projects, #contact {
-        scroll-margin-top: 60px;
     }
 }
