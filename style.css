@@ -220,12 +220,13 @@ main {
     border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Section scroll margin fix for fixed header */
-.education-section,
-.skills-section,
-.projects-section,
-.contact-section {
-    scroll-margin-top: 120px;
+/* FIXED: Apply scroll margin to the section IDs that links point to */
+#home,
+#education,
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: 150px;
 }
 
 .education-section {
@@ -441,7 +442,6 @@ main {
 .projects-section {
     padding: 120px 80px;
     background: #0a0a0a;
-    scroll-margin-top: 120px;
 }
 
 .projects-container {
@@ -552,7 +552,6 @@ main {
     padding: 120px 80px;
     background: #0a0a0a;
     position: relative;
-    scroll-margin-top: 120px;
 }
 
 .contact-container {
@@ -707,12 +706,13 @@ main {
 
 /* Main responsive fixes for mobile/tablet */
 @media screen and (max-width: 1000px) {
-    /* Adjust scroll margin for mobile header height */
-    .education-section,
-    .skills-section,
-    .projects-section,
-    .contact-section {
-        scroll-margin-top: 80px;
+    /* Adjust scroll margin for mobile */
+    #home,
+    #education,
+    #skills,
+    #projects,
+    #contact {
+        scroll-margin-top: 100px;
     }
     
     header {
