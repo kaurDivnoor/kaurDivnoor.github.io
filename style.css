@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding: 150px 0 100px 0;
+    scroll-padding: 120px 0 100px 0;
 }
 
 body {
@@ -1029,6 +1029,7 @@ main {
         font-size: 16px;
     }
 }
+
 
 
 
