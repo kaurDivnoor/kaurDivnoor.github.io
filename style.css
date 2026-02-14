@@ -86,11 +86,12 @@ main {
     padding-top: 40px;
     padding-bottom: 40px;
     position: relative;
+    max-width: 50%; /* Limit left column width */
 }
 
 .hero-content {
     margin-top: 20px;
-    max-width: 700px;
+    max-width: 90%; /* Further constrain content */
 }
 
 .typing-main {
@@ -112,7 +113,7 @@ main {
 
 .bio-section {
     margin-top: 30px;
-    max-width: 600px;
+    max-width: 90%; /* Constrain bio section width */
 }
 
 .bio-text {
@@ -136,6 +137,7 @@ main {
     margin-top: 40px;
     text-align: left;
     z-index: 10;
+    max-width: 90%; /* Constrain info card width */
 }
 
 .info-card h2 {
@@ -185,6 +187,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 50%; /* Limit right column width */
 }
 
 .right::before {
@@ -646,6 +649,41 @@ main {
     animation: fadeIn 0.6s ease;
 }
 
+/* Desktop-specific fixes */
+@media (min-width: 1001px) {
+    .hero-section {
+        gap: 40px; /* Add gap between columns */
+    }
+    
+    .left {
+        max-width: 45%; /* Make left column narrower */
+    }
+    
+    .right {
+        max-width: 55%; /* Give right column more space */
+    }
+    
+    .hero-content,
+    .bio-section,
+    .info-card {
+        max-width: 90%;
+    }
+    
+    .bio-text {
+        font-size: 15px; /* Slightly smaller text on desktop */
+        line-height: 1.6;
+    }
+    
+    .image-wrapper {
+        padding-left: 60px;
+    }
+    
+    .right img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 @media (max-width: 1400px) {
     .right img {
         width: 380px;
@@ -653,13 +691,17 @@ main {
     }
     
     .image-wrapper {
-        padding-left: 80px;
+        padding-left: 50px;
+    }
+    
+    .typing-main {
+        font-size: 60px;
     }
 }
 
 @media (max-width: 1200px) {
     .typing-main {
-        font-size: 60px;
+        font-size: 52px;
     }
     
     .right img {
@@ -672,7 +714,13 @@ main {
     }
     
     .image-wrapper {
-        padding-left: 60px;
+        padding-left: 40px;
+    }
+    
+    .hero-content,
+    .bio-section,
+    .info-card {
+        max-width: 95%;
     }
 }
 
@@ -695,11 +743,13 @@ main {
         flex-direction: column;
         padding: 0 20px;
         min-height: auto;
+        gap: 0;
     }
     
     .left {
         padding: 30px 0 20px 0;
         width: 100%;
+        max-width: 100%;
     }
     
     .hero-content {
@@ -740,6 +790,7 @@ main {
         width: 100%;
         padding: 20px 0 20px 0;
         position: relative;
+        max-width: 100%;
     }
     
     .right::before {
@@ -762,6 +813,7 @@ main {
         margin-top: 30px;
         text-align: left;
         width: 100%;
+        max-width: 100%;
     }
     
     .info-card h2 {
