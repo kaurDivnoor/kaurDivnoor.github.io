@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 120px; /* Increased from 100px to give more space */
 }
 
 body {
@@ -68,6 +68,15 @@ nav a.active {
 
 main {
     margin-top: 100px;
+}
+
+/* Add scroll margin to all sections to account for fixed header */
+#home,
+#education,
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: 100px;
 }
 
 .hero-section {
