@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* Increased from 100px to give more space */
+    /* Remove scroll-padding-top */
 }
 
 body {
@@ -43,6 +43,7 @@ nav a {
     transition: color 0.2s ease;
     letter-spacing: 0.5px;
     position: relative;
+    cursor: pointer;
 }
 
 nav a::after {
@@ -70,11 +71,23 @@ main {
     margin-top: 100px;
 }
 
-/* Add scroll margin to all sections to account for fixed header */
-#home,
-#education,
-#skills,
-#projects,
+/* Add padding-top to sections to account for fixed header */
+#home {
+    scroll-margin-top: 100px;
+}
+
+#education {
+    scroll-margin-top: 100px;
+}
+
+#skills {
+    scroll-margin-top: 100px;
+}
+
+#projects {
+    scroll-margin-top: 100px;
+}
+
 #contact {
     scroll-margin-top: 100px;
 }
